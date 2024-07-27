@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacity Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="page1">
+        <div class="formhead">
+            <center>
+                <h1>Lithium-Ion Battery Capacity Predictor</h1>               
+            </center>
+        </div>
+        <div class="form">
+            <form action="{{ url_for('prediction') }}" class="formpage">
+                <div class="formcnt">
+                    <center>
+                    <div class="formgrp"><input type="text" class="prompt" name="cycles" placeholder="Enter Number of Cycles"><br></div>
+                    <div class="formgrp"><input type="text" class="prompt" name="voltage_battery" placeholder="Battery Voltage"><br></div>
+                    <div class="formgrp"><input type="text" class="prompt" name="temp_battery" placeholder="Enter Battery Temperature"><br></div>
+                    <div class="formgrp"><input type="text" class="prompt" name="time" placeholder="Enter Time"><br></div>
+                    <div class="formgrp"><input type="submit" value="Check Capacity" class="submitbtn"></div>                         
+                    </center>
+                   
+                </div>
+                
+            </form>
+        </div>
+    </section>
+</body>
+</html>
