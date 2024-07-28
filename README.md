@@ -1,33 +1,64 @@
 # Battery-Capacity-Prediction-Using-Regression
 
 ## 1. Introduction
-The Electric Vehicle (EV) Battery Capacity Prediction Model is designed to estimate the capacity of lithium-ion battery. This predictive capability is crucial for optimizing battery performance, ensuring efficient energy use, and enhancing the overall user experience of EVs.
+Electric vehicles (EVs) are transforming transportation with eco-friendly alternatives to gasoline-powered cars. However, battery life and range anxiety remain significant challenges. Accurately predicting battery capacity is crucial for optimizing charging schedules, extending battery lifespan, and enhancing the overall EV user experience.
+
 ## 2. Objective
-The primary objective of the model is to predict capacity of the battery based on various trip-related parameters. This helps in predicting remaining useful battery life which provides insights into battery performance, planning optimal routes, and making informed decisions on battery management. 
+Our machine learning model predicts the remaining capacity of lithium-ion batteries in EVs. By analyzing factors like voltage, current, temperature, and load, the model provides insights into battery health. This helps EV owners make informed decisions on charging schedules, driving habits, and vehicle management, ultimately extending battery life and reducing range anxiety.
+
 ## 3. Dataset Description
-The dataset was obtained from NASA. The model is trained on a dataset containing the following features of Lithium-ion battery:
-•	Voltage 
-•	Current 
-•	Temperature
-•	Current Load
-•	Voltage Load
-•	Time
+We used a high-quality dataset from NASA, including parameters like voltage, current, temperature, current load, voltage load, and time. These features are critical for understanding lithium-ion battery behavior under various conditions.
+
 ## 4. Data Preprocessing
-The preprocessing steps include:
-•	Handling Missing Values: Dropping or imputing missing values.
-•	Histogram: Plotting histogram to visualize the distribution of values
-•	Heat-map: Plotting heatmap to visualize correlation between various factors
+Preprocessing steps included:
+- **Handling Missing Values**: Addressing missing values through imputation or removal.
+- **Exploratory Data Analysis (EDA)**: Visualizing feature distributions with histograms and identifying correlations with heatmaps.
+These steps ensured data quality and prepared the dataset for accurate battery capacity prediction.
+
 ## 5. Model Selection
-We selected multiple regression models such as Extra Trees Regressor, Random Forest Regressor, Extreme Gradient Boosting, Gradient Boosting Regressor, Light Gradient Boosting Machine, Decision Tree Regressor, AdaBoost Regressor, Bayesian Ridge, Least Angle Regression, Ridge Regression, Linear Regression, Huber Regressor, K Neighbors Regressor, Elastic Net, Lasso Regression, Lasso Least Angle Regression, Passive Aggressive Regressor, Orthogonal Matching Pursuit and Dummy Regressor.
+We explored various regression models, including:
+- **Ensemble Methods**: Extra Trees Regressor, Random Forest Regressor, XGBoost, Gradient Boosting Regressor, LightGBM, AdaBoost Regressor.
+- **Linear Models**: Linear Regression, Ridge Regression, Lasso Regression, Elastic Net, Bayesian Ridge, Least Angle Regression.
+- **Non-linear Models**: Decision Tree Regressor, K-Nearest Neighbors Regressor, Huber Regressor, Passive Aggressive Regressor, Orthogonal Matching Pursuit.
+- **Baseline Model**: Dummy Regressor.
+This comprehensive exploration helped identify the most suitable algorithm for predicting battery capacity.
+
 ## 6. Model Training
-The model is trained on 80% of the dataset, with the remaining 20% used for testing. The training involves fitting the model to the pre-processed features and the target variable (capacity).
+We trained the models using an 80/20 train-test split. Each model was fitted to the preprocessed features, with battery capacity as the target variable. This approach enabled the models to learn complex patterns in the data, leading to accurate predictions.
+
 ## 7. Evaluation
-We evaluated the models based on MAE(Mean Absolute Error), MSE(Mean Squared Error), RMSE(Root Mean Squared Error), R2(R squared value), RMSLE(Root Mean Squared Logarithmic Error), MAPE(Mean Absolute Percentage Error) and TT(Training Time in seconds).
+We evaluated the models using metrics like MAE, MSE, RMSE, R², RMSLE, MAPE, and Training Time. This comprehensive evaluation provided a clear understanding of each model's performance, helping us select the best candidate.
 
 ## 8. Model Deployment
-Using Pycaret, we deployed all the regression models on our dataset. We listed the model performance and found that ExtraTreeRegressor was the best model with 0.0059 MAE, 0.0001 MASE, 0.0086 RMSE, 0.9981 R2, 0.0033 RMSLE and 0.0037 MAPE. We further selected only 4 features, namely cycles, voltage_battery, temp_battery and time. We then deployed the model to a web application which accepts these values and predicts the value of capacity.
+Using PyCaret, we deployed various regression models and found that ExtraTreesRegressor performed the best with outstanding metrics. We then identified four key features—cycles, voltage_battery, temp_battery, and time—and deployed the model to a web application. This application allows users to input these values and get real-time battery capacity predictions.
 
 ## 9. Conclusion
-The EV Battery Usage Prediction Model is a powerful tool for optimizing battery performance in electric vehicles. By leveraging historical trip data and advanced machine learning techniques, the model provides accurate predictions of battery capacity, which can help users estimate the remaining useful life and make informed decisions on route planning and battery management.
+Our EV Battery Capacity Prediction Model optimizes battery performance by accurately predicting battery capacity. This empowers users to make informed decisions about driving habits and charging schedules, alleviating range anxiety and extending battery life. As battery technology evolves, our model can incorporate additional factors for even more accurate and personalized predictions.
 
+---
 
+# Installation and Usage Tutorial
+
+## Installation and Usage Tutorial
+
+# Clone the Repository
+git clone https://github.com/yourusername/Battery-Capacity-Prediction-Using-Regression.git
+cd Battery-Capacity-Prediction-Using-Regression
+
+# Create and Activate a Virtual Environment
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
+# Install the Required Packages
+pip install -r requirements.txt
+
+# Run the Jupyter Notebook
+cd working_directory
+jupyter notebook
+
+# Deploy the Model
+cd ../app
+flask run
+
+# Access the web application
+# Open your web browser and go to http://127.0.0.1:5000/
