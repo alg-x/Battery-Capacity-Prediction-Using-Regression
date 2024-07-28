@@ -18,18 +18,24 @@ body{
 }
 .formgrp{
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 .formcnt{
     max-width: 100%;
     margin: auto;
+    
 }
 .prompt{
+    display: inline-block;
     background-color: white;
+    margin-left: 10px;
     border-radius: 20px;
     padding: 15px;
     border-style: solid;
     max-width: 100%;
     line-height: 25px;
+    flex: 1;
 }
 
 input.prompt{
@@ -63,4 +69,23 @@ input:hover{
 .rslt-cont{
     font-size: 30px;
     color: white;
+}
+
+.info{
+    display: none;
+    margin: 10px;
+}
+.icon:hover ~ .info{
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.icon{
+    background-color: black;
+    color: white;
+    width: 20px;
+    border-radius: 100%;
+    margin: 20px;
 }
