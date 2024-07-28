@@ -40,11 +40,11 @@
             <form action="{{ url_for('prediction') }}" class="formpage" method="POST">
                 <div class="formcnt">
                     <center>
-                    <div class="formgrp"><input type="text" class="prompt" name="cycle" placeholder="Enter Number of Cycles"><br></div>
-                    <div class="formgrp"><input type="text" class="prompt" name="voltage_battery" placeholder="Battery Voltage"><br></div>
-                    <div class="formgrp"><input type="text" class="prompt" name="temp_battery" placeholder="Enter Battery Temperature"><br></div>
-                    <div class="formgrp"><input type="text" class="prompt" name="time" placeholder="Enter Time"><br></div>
-                    <div class="formgrp"><input type="submit" value="Check Capacity" class="submitbtn"></div>
+                    <div class="formgrp"><input type="text" class="prompt" name="cycle" placeholder="Enter Number of Cycles"><div class="icon">?</div><div class="info">Number of times a battery can be fully charged and discharged</div><br></div>
+                    <div class="formgrp"><input type="text" class="prompt" name="voltage_battery" placeholder="Enter Battery Voltage"><div class="icon">?</div><div class="info">Battery terminal voltage in Volts</div><br></div>
+                    <div class="formgrp"><input type="text" class="prompt" name="temp_battery" placeholder="Enter Battery Temperature"><div class="icon">?</div><div class="info">Battery temperature in degree C</div><br></div>
+                    <div class="formgrp"><input type="text" class="prompt" name="time" placeholder="Enter Time"><div class="icon">?</div><div class="info">Time vector for the cycle in secs</div><br></div>
+                    <div class="null"><input type="submit" value="Check Capacity" class="submitbtn"></div>  
                     </center>
                 </div>
 
