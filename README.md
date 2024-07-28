@@ -42,10 +42,10 @@ Our EV Battery Capacity Prediction Model optimizes battery performance by accura
 ## Installation and Usage Tutorial
 
 1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/Battery-Capacity-Prediction-Using-Regression.git
-   cd Battery-Capacity-Prediction-Using-Regression
-   ```
+```bash
+git clone https://github.com/yourusername/Battery-Capacity-Prediction-Using-Regression.git
+cd Battery-Capacity-Prediction-Using-Regression
+```
 2. **Create and Activate a Virtual Environment**
 ```bash
 python -m venv venv
@@ -68,5 +68,5 @@ jupyter notebook
 cd ../app
 flask run
 ```
-5. **Access the web application**
+5. **Access the web application**\
 Host the web application on any hosting of your choice, preferably Python Anywhere
