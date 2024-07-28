@@ -65,7 +65,7 @@ jupyter notebook
 
 4. **Deploy the Model**
 ```bash
-cd ../app
+cd ../!app
 flask run
 ```
 5. **Access the web application**\
