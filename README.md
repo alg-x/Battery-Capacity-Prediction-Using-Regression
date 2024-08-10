@@ -1,4 +1,6 @@
 # Battery-Capacity-Prediction-Using-Regression
+<!-- readme: Bhagy3sh,BRRAIN7,aryansahare,AnveshaSingh contributors -start -->
+<!-- readme: contributors -end -->
 
 ## 1. Introduction
 Electric vehicles (EVs) are transforming transportation with eco-friendly alternatives to gasoline-powered cars. However, battery life and range anxiety remain significant challenges. Accurately predicting battery capacity is crucial for optimizing charging schedules, extending battery lifespan, and enhancing the overall EV user experience.
